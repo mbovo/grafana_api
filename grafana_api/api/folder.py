@@ -68,12 +68,12 @@ class Folder(Base):
         r = self.api.GET(path)
         return r
 
-    def get_folder_permissions(self):
+    def get_folder_permissions(self, folder_id):
         """
 
         :return:
         """
-        path = "/folders/%s/permissions"
+        path = "/folders/%s/permissions" % folder_id
         r = self.api.GET(path)
         return r
 
